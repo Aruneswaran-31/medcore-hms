@@ -1,0 +1,26 @@
+{
+  "name": "medcore-hms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MedCore HMS — enterprise-grade Hospital Management Platform (multi-tenant SaaS)",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter backend --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "build": "pnpm --filter types build && pnpm --filter backend build && pnpm --filter frontend build",
+    "lint": "pnpm --parallel --filter backend --filter frontend lint",
+    "typecheck": "pnpm --filter types build && pnpm --filter backend typecheck && pnpm --filter frontend typecheck",
+    "test": "pnpm --filter backend test",
+    "db:migrate": "pnpm --filter backend db:migrate",
+    "db:deploy": "pnpm --filter backend db:deploy",
+    "db:seed": "pnpm --filter backend db:seed",
+    "db:studio": "pnpm --filter backend db:studio"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}
